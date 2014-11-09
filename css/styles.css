@@ -58,16 +58,11 @@ a.jp-stop:hover {
 	background-color: transparent;
 }
 
-.progress-bar {
-	overflow: hidden;
-	background-color: #8b8599; /* Old browsers */
-	background: -moz-linear-gradient(top,  #8b8599 0%, #aea5b5 13%, #8e889a 48%, #948ea2 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8b8599), color-stop(13%,#aea5b5), color-stop(48%,#8e889a), color-stop(100%,#948ea2)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #8b8599 0%,#aea5b5 13%,#8e889a 48%,#948ea2 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #8b8599 0%,#aea5b5 13%,#8e889a 48%,#948ea2 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #8b8599 0%,#aea5b5 13%,#8e889a 48%,#948ea2 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #8b8599 0%,#aea5b5 13%,#8e889a 48%,#948ea2 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b8599', endColorstr='#948ea2',GradientType=0 ); /* IE6-9 */
+.audio .progress-bar {
+	position: absolute;
+	top:17px;
+	height:16px;
+	left:155px;
+	width:150px;
+	z-index: 999;
 }
-
-
