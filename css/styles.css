@@ -1,11 +1,106 @@
-#animation_container { 
-	width: 400px; 
-	height: 600px; 
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+#title {
+	font-family: 'Pacifico', cursive;
+	margin: 2% 0 2% 2%;
+}
+
+.main-nav {
+	margin-top: 2%;
+	margin-left: 3.5%;
+	margin-bottom: 3%;
+}
+
+.controllers {
+	background-color: #83AF9B;
+	border-radius: 6px;
+	height: 70px;
+}
+
+#breadcrumb {
+	width: 500px;
+	height: 50px;
+	background-color: green;
+}
+
+#map {
+	margin: 0;
+	width:70px;
+	height: 70px;
+	top: 0px;
+	display: inline-block;
+	background-size: 144px 140px;
+	background-position: 0 70px;
+	background-image: url(../img/menu_button.png);
+}
+
+#map:hover { 
+	cursor: pointer;
+}
+
+#next {
+	top: 0;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	background-size: 144px 140px; 
+	background-position: 0 70px;
+	background-image: url(../img/next_button.png);
+	float: right;
+}
+
+#next:hover {
+	cursor: pointer;
+}
+
+#index-images ul li {
+	display: inline-block;
+}
+
+#first-lesson, #second-lesson, #third-lesson {
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+}
+
+#first-lesson:hover, #second-lesson:hover, #third-lesson:hover {
+	cursor: pointer;
+}
+
+#first-lesson {
+	background-image: url(../img/sunset1.jpg);
+}
+
+#first-lesson:hover	{
+	background-image: url(../img/sunset1_hover.jpg);
+}
+
+#second-lesson {
+	background-image: url(../img/sunset2.jpg);
+}
+
+#second-lesson:hover {
+	background-image: url(../img/sunset2_hover.jpg);
+}
+
+#third-lesson {
+	background-image: url(../img/sunset3.jpg);
+}
+
+#third-lesson:hover {
+	background-image: url(../img/sunset3_hover.jpg);
+}
+
+
+/* First try */
+/*#animation_container { 
+	width: 500px; 
+	height: 300px; 
 	background-color: pink;
 }
 
 #animation_controllers {
-	width: 400px; 
+	width: 500px; 
 	height: 60px; 
 	background-color: blue; 
 	z-index: 20; 
@@ -58,11 +153,71 @@ a.jp-stop:hover {
 	background-color: transparent;
 }
 
-.audio .progress-bar {
-	position: absolute;
-	top:17px;
-	height:16px;
-	left:155px;
-	width:150px;
-	z-index: 999;
+#chapters {
+	width: 340px;
+	height: 65px;
+	display: inline-block;
+
 }
+
+#chapters ul {
+	margin: 0;
+	height: 65px;
+}
+
+#map {
+	margin: 0;
+	width:70px;
+	height: 70px;
+	top: 0px;
+	display: inline-block;
+	background-size: 144px 140px;
+	background-position: 0 70px;
+	background-image: url(../img/menu_button.png);
+}
+
+#map:hover { 
+	cursor: pointer;
+}
+
+#next {
+	top: 0;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	background-size: 144px 140px; 
+	background-position: 0 70px;
+	background-image: url(../img/next_button.png);
+	float: right;
+}
+
+#next:hover {
+	cursor: pointer;
+}
+
+#information-controlls {
+	background-color: purple;
+	width: 500px;
+	height: 70px;
+}
+
+span.active {
+	width: 95px;
+	height: 60px;
+	overflow: hidden;
+	background-image: url(../img/sunset1.jpg);
+}
+
+.index-2 {
+	background-image: url(../img/sunset2.jpg);
+}
+
+.index-3 {
+	background-image: url(../img/sunset3.jpg);
+}
+
+
+*/
+
+
+
