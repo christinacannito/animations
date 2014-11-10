@@ -23,6 +23,10 @@
 	background-color: green;
 }
 
+.lessons {
+	margin: 0 2% 2% 2%;
+}
+
 #map {
 	margin: 0;
 	width:70px;
