@@ -30,7 +30,7 @@ function doStart(){
 function goToPage() {
 	console.log("lessonNumber in goToPage: ",lessonNumber);
 	console.log("currentPage in goToPage: ",currentPage);
-	var ajaxTar = 'gardening_lessons/lesson' + lessonNumber + '/gardening_lesson_' + currentPage + ".html";
+	var ajaxTar = 'gardening_lessons/lesson' + lessonNumber + '/garden_lesson_' + currentPage + ".html";
 	
 	$('#map_info').fadeOut(function(){ // fading out 
     $(this).hide();
