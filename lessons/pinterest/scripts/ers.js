@@ -6,8 +6,8 @@ function doStart(){
 		for (var ind in less) {
 			console.log(ind); // index numbers (images should go from 0 and up)
 			tiles += '<div class="col-sm-4" id="' + ind + '">';
-			tiles += '<div class="thumbnail">';
-			tiles += '<img src="../../img/gardening_tools/tools_' + ind + '.jpg" alt="" />';
+			tiles += '<div class="thumbnail">';	
+			tiles += '<img src="../../img/pinterest/pinterest_' + ind + '.jpg" alt="" />';
 			tiles += '<div class="caption">';
 			tiles += '<h3>' + less[ind].title + '</h3>';
 			tiles += '<p>' + less[ind].description + '</p>';

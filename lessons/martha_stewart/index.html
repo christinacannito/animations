@@ -13,8 +13,9 @@
 	<script type="text/javascript" src="../../javascript/jquery.jplayer.min.js"></script>
 	<script type="text/javascript" src="../../javascript/animate.js"></script>
 	<script type="text/javascript" src="scripts/load_content.js"></script>
+	<script type="text/javascript" src="scripts/ers.js"></script>
 </head>
-<body>
+<body onload="doStart()">
 
 	<head>
 		<h1 id="title">little animations</h1>
@@ -33,7 +34,10 @@
   	<!-- <li><a href="#">Lessons</a></li> -->
 	</ol>
 
-	<div id="course_map"> 
+	<div class="container">
+		<div class="row" id="map_info">
+			<!-- all the information for the maps go here -->
+		</div>
 	</div>
 
 	<div id="course_lessons">

@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	$('#course_map').load('gardening_lessons/course_map/gardening_map.html', function(response, status){
-		console.log(response);
+	// $('#course_map').load('gardening_lessons/course_map/gardening_map.html', function(response, status){
+	// 	console.log(response);
 	
 		$('#intro').click(function(){
 			$('#course_map').remove();
@@ -23,4 +23,4 @@ $(document).ready(function() {
 			});
 		})
 	});
-});
+// });

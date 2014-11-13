@@ -6,6 +6,7 @@ lesson.title = 'Gardening';
 lesson.identifier = 'FunGardening';
 lesson.individualLessons = [{
 	title: 'Intro Gardening.', // first lesson will have two slides
+	description: 'Basic tools you will need and what to wear.',
 	time: '2:00',
 	slides: [
 		{
@@ -20,6 +21,7 @@ lesson.individualLessons = [{
 	thumbnails: 2
 	}, {
 		title: 'More in depth look at tools.', // 2nd lesson 
+		description: 'Cover a wide range of tools.',
 		time: '20:00',
 		slides: [
 			{
@@ -33,7 +35,8 @@ lesson.individualLessons = [{
 			}],
 		thumbnails: 2
 		}, {
-			title: 'Get the tools you need.',
+			title: 'Get the tools you need.', // 3rd lesson
+			description: 'How to get by with the basic tool set.',
 			time: '25:00',
 			slides: [
 				{
