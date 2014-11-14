@@ -1,4 +1,5 @@
 var lessonNumber = 0;
+var pages = [];
 
 function doStart(){
 	$.getScript("scripts/lesson_data.js", function(script, textStatus, jqXHR){
@@ -37,11 +38,52 @@ function goToPage() {
     console.log(ajaxTar);
 		$("#course_lessons").load(ajaxTar);
 	});
+
+	$("#course_lessons").load(ajaxTar);
 }
 
 function openLesson(lessonNum, pageNum) {
-	var pages = lesson.individualLessons[lessonNum];
+	pages = lesson.individualLessons[lessonNum];
 	console.log("PAGES! ",pages);
 	currentPage = pageNum;
+	buildNav();
 	goToPage();
 }
+
+function buildNav() {
+	// Fill in nav
+	$('#lesson_navigation ul').css('left', 0);
+	// var nav = $('#lesson_nav .thumbnails ul').html('');
+	for ( var ind in pages.slides ) {
+		console.log("HERE HERE");
+		console.log(pages.slides[ind]);
+		console.log("parseInt");
+		console.log(parseInt(ind));
+		var slide = pages.slides[ind];
+		if (parseInt(ind) == parseInt(currentPage)) {
+			var li = '<li class="active_thumb" style="background-image: url(\'gardening_lessons/lesson' + lessonNumber + '/gardening' + ind + '.png\');"><span>' + ind + '</span></li>';
+			console.log("list item in if: ",li);
+		} else {
+			var li = '<li style="background-image: url(\'gardening_lessons/lesson' + lessonNumber + '/gardening' + ind + '.png\');"><span>' + ind + '</span></li>';
+		}
+		console.log("LIST ITEM: ",li);
+		$("#thumbnail_img").append(li);
+	}	
+
+	$("#thumbnail_img li").click(function(){
+		// alert("was clicked.");
+		currentPage = parseInt($(this).text()); // this is how you get access to the thumbnail number
+		goToPage(currentPage);
+	});
+}
+
+
+
+
+
+
+
+
+
+
+
