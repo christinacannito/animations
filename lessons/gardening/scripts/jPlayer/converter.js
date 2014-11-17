@@ -3,6 +3,7 @@ var jpCount = 1;
 
 // Replace all HTML5 video and audio tags in given selector with jPlayer equivalents
 function jpUpdate(target) {
+	console.log("jpUpdate");
 	var audios = $(target).find('audio');
 	audios.each(function(i){
 		if (!ie8_lower) {
@@ -23,9 +24,16 @@ function jpUpdate(target) {
 
 // Insert a new audio jPlayer and controller with given ID into insert selectors. Return player element
 function genAudio(id, insertControls, insertPlayer) {
+	console.log("id: ",id);
+	console.log("insertControls: ",insertControls);
+	console.log("insertPlayer: ",insertPlayer);
+	// console.log("genAudio");
 	var player = genPlayer(id);
+	console.log("player: ",player);
 	if (insertControls) {
+		console.log("inside if statement");
 		var controls = genControls('audio');
+		console.log("controls: ",controls);
 		$(controls).appendTo(insertControls);
 	}
 	return $(player).appendTo(insertPlayer);
@@ -33,6 +41,7 @@ function genAudio(id, insertControls, insertPlayer) {
 
 // Insert a new video jPlayer and controller with given ID into insert selectors. Return player element
 function genVideo(id, insertControls, insertPlayer) {
+	console.log("genVideo");
 	var player = genPlayer(id);
 	var controls = genControls('video');
 	var returner = $(player).appendTo(insertPlayer);
@@ -41,6 +50,7 @@ function genVideo(id, insertControls, insertPlayer) {
 }
 
 function genControls(playerType) {
+	console.log("genControls");
 	var jpClass = "";
 	
 	switch (playerType) {
@@ -82,15 +92,18 @@ function genControls(playerType) {
 }
 
 function genPlayer(id) {
+	console.log("genPlayer");
 	return '<div id="' + id + '" class="jp-jplayer"></div>';
 }
 
 function initAudio(replaceTar) {
+	console.log("initAudio");
 	// Extract audio file
 	var srcs = [];
 	var files = {};
 	$(replaceTar).find('source').each(function(i){
 		var thisrc = $(this).attr('src');
+		console.log("thisrc: ",thisrc);
 		var ext = thisrc.substring( thisrc.lastIndexOf(".") + 1 );
 		srcs.push(ext);
 		files[ext] = thisrc;
@@ -111,6 +124,7 @@ function initAudio(replaceTar) {
 }
 
 function initVideo(replaceTar) {
+	console.log("initVideo");
 	// Extract video file
 	var srcs = [];
 	var files = {};

@@ -12,7 +12,7 @@ lesson.individualLessons = [{
 		{
 			// Page 0
 			title: "Let's get started!",
-			audio: '01_00_030' 
+			audio: 'WT00010_GM_042114' 
 		}, {
 			// Page 1
 			title: "A step into the garden",

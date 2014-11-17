@@ -6,7 +6,12 @@
 		
 	$(document).ready(function() {		
 		// Init global audio player
+		console.log("from global.js file");
+		console.log("genAudio function"); // last thing you see 
+		genAudio('global_audio', '', '#global_audio_box'); // gets called in converter file
+		// console.log("end of genAudio function");
 		var globalAudio = genAudio('global_audio', '', '#global_audio_box');
+		console.log("globalAudio var: ",globalAudio);
 		globalAudio.jPlayer({
 			ready: function (event) {
 				$(this).jPlayer("setMedia", {
@@ -20,9 +25,10 @@
 		globalAudio.bind($.jPlayer.event.ended, function(event) {
 			$('.audio_summary.playing').removeClass('playing');
 		});
-		
+		console.log("globalAudio after bind: ",globalAudio)
+
 		// Init lesson narration player
-		var narrAudio = genAudio('lesson_audio', '#lesson_narration', '#global_audio_box');
+		var narrAudio = genAudio('lesson_audio', '#lesson_controls', '#global_audio_box');
 		$('#lesson_audio').jPlayer({
 			ready: function (event) {
 				$(this).jPlayer("setMedia", {
@@ -30,7 +36,7 @@
 				});
 			},
 			swfPath: "scripts/jPlayer",
-			cssSelectorAncestor: "#lesson_narration .jp-audio",
+			cssSelectorAncestor: "#lesson_controls .jp-audio",
 			supplied: "mp3",
 			wmode: "window"
 		});
@@ -40,17 +46,20 @@
 })();
 
 function loadLesson(lesson) {
+	console.log("in loadLesson");
 	// Temporary simple link script for loading a "lesson" page
 	window.location = lesson;
 }
 
 // jPlayer helper functions
 function isPlaying(audioPlayer) {
+	console.log("in isPlaying");
 	return !$(audioPlayer).data().jPlayer.status.paused;
 }
 
 // Play global player with options: 'playpause', 'restart' or 'wait'
 function playAudio(audioPlayer, option) {
+	console.log("in playAudio");
 	if (!$(audioPlayer).length)
 		return;
 	var paused = !isPlaying(audioPlayer);
@@ -88,6 +97,7 @@ function playAudio(audioPlayer, option) {
 }
 
 function stopAudio(audioPlayer) {
+	console.log("stopAudio");
 	$(audioPlayer).jPlayer("stop");
 	if (audioPlayer === '#global_audio') {
 		$('.audio_summary.playing').removeClass('playing');
@@ -95,6 +105,7 @@ function stopAudio(audioPlayer) {
 }
 
 function updateAudio(audioPlayer, audioFile) {
+	console.log("updateAudio");
 	$(audioPlayer).jPlayer("setMedia", {
 		mp3: audioFile + ".mp3"
 	});

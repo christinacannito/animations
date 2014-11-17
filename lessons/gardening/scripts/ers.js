@@ -25,6 +25,14 @@ function doStart(){
 			lessonNumber = $(this).attr('id');
 			openLesson(lessonNumber, 0);
 		})
+
+		// var lessonObj = lesson[pagetype][lessonNumber];
+	  console.log("trying to get sound");
+		console.log("lesson.slides[currentPage].audio:");
+		console.log(lesson.slides[currentPage].audio)
+		updateAudio('#lesson_audio', 'assets/audio/' + lesson.slides[currentPage].audio);
+		$('#lesson_frame').removeClass('audioOff');
+		playAudio('#lesson_audio', 'playpause');
 	});
 }
 
